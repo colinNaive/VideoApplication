@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <!--底图-->
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        android:src="@drawable/default_pic_material"
+        android:visibility="visible" />
+    <!--加载动画-->
+    <LinearLayout
+        android:id="@+id/ll_loading"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ProgressBar
+            android:layout_width="27dp"
+            android:layout_height="10dp"
+            android:indeterminateDrawable="@drawable/loading" />
+
+        <TextView
+            android:id="@+id/load_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="正在缓冲..."
+            android:textColor="@android:color/white"
+            android:textSize="13sp" />
+    </LinearLayout>
+    <!--改变播放位置-->
+    <LinearLayout
+        android:id="@+id/change_position"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@drawable/bg_radius_4"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="8dp"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/change_position_current"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="00:00"
+            android:textColor="@android:color/white"
+            android:textSize="28sp" />
+
+        <ProgressBar
+            android:id="@+id/change_position_progress"
+            style="@android:style/Widget.ProgressBar.Horizontal"
+            android:layout_width="100dp"
+            android:layout_height="2dp"
+            android:layout_marginBottom="4dp"
+            android:layout_marginTop="8dp"
+            android:max="100"
+            android:progressDrawable="@drawable/pb_change" />
+    </LinearLayout>
+    <!--播放完成-->
+    <LinearLayout
+        android:id="@+id/completed"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#6c0b0b0b"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="播放完成"
+            android:textColor="#ffffff" />
+
+        <TextView
+            android:id="@+id/replay"
+            android:layout_width="76dp"
+            android:layout_height="29dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/cttour_detail_border"
+            android:gravity="center"
+            android:text="重新播放"
+            android:textColor="#ffffff"
+            android:textSize="12dp" />
+    </LinearLayout>
+    <!--播放错误-->
+    <LinearLayout
+        android:id="@+id/error"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#88000000"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="世界上最遥远的距离就是断网"
+            android:textColor="#ffffff" />
+
+        <TextView
+            android:id="@+id/retry"
+            android:layout_width="76dp"
+            android:layout_height="29dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/cttour_detail_border"
+            android:gravity="center"
+            android:text="刷新"
+            android:textColor="#ffffff"
+            android:textSize="12dp" />
+    </LinearLayout>
+    <!--提示目前正使用4G-->
+    <LinearLayout
+        android:id="@+id/note_4g"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#88000000"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="您正在使用非Wifi网络"
+            android:textColor="#ffffff"
+            android:textSize="15.33dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="5dp"
+            android:text="观看会消耗您的流量，是否继续观看"
+            android:textColor="#ffffff"
+            android:textSize="11.33dp" />
+
+        <TextView
+            android:id="@+id/continue_play"
+            android:layout_width="76dp"
+            android:layout_height="29dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/cttour_detail_border"
+            android:gravity="center"
+            android:text="继续播放"
+            android:textColor="#ffffff"
+            android:textSize="12dp" />
+    </LinearLayout>
+    <!--断网-->
+    <LinearLayout
+        android:id="@+id/disconnect"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#88000000"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="世界上最遥远的距离就是断网"
+            android:textColor="#ffffff" />
+
+        <TextView
+            android:id="@+id/refresh"
+            android:layout_width="76dp"
+            android:layout_height="29dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/cttour_detail_border"
+            android:gravity="center"
+            android:text="刷新"
+            android:textColor="#ffffff"
+            android:textSize="12dp" />
+    </LinearLayout>
+    <!--顶部控制区-->
+    <LinearLayout
+        android:id="@+id/top"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:background="@drawable/player_mask_top"
+        android:gravity="center_vertical"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp">
+
+        <com.ctrip.videoapplication.util.CTTourIconFont
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="&#xe015;"
+            android:textColor="#ffffff"
+            android:textSize="20dp"
+            android:visibility="visible" />
+
+    </LinearLayout>
+    <!--底部控制区-->
+    <LinearLayout
+        android:id="@+id/bottom"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/player_mask_bottom"
+        android:gravity="center_vertical"
+        android:paddingLeft="8dp">
+
+        <com.ctrip.videoapplication.util.CTTourIconFont
+            android:id="@+id/restart_or_pause"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="&#xe545;"
+            android:textColor="#ffffff"
+            android:textSize="15dp" />
+
+        <SeekBar
+            android:id="@+id/seek"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="7dp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:max="100"
+            android:maxHeight="1.5dp"
+            android:minHeight="1.5dp"
+            android:progressDrawable="@drawable/seek_progress"
+            android:thumb="@drawable/seek_thumb" />
+
+        <TextView
+            android:id="@+id/position"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:text="00:00"
+            android:textColor="@android:color/white"
+            android:textSize="12sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="/"
+            android:textColor="@android:color/white"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/duration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="00:00"
+            android:textColor="@android:color/white"
+            android:textSize="12sp" />
+
+        <com.ctrip.videoapplication.util.CTTourIconFont
+            android:id="@+id/full_screen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="13dp"
+            android:paddingRight="8dp"
+            android:text="&#xe579;"
+            android:textColor="#ffffff"
+            android:textSize="15dp" />
+    </LinearLayout>
+    <!--中间开始播放按钮-->
+    <com.ctrip.videoapplication.util.CTTourIconFont
+        android:id="@+id/center_start"
+        android:layout_width="61dp"
+        android:layout_height="61dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/cttour_detail_play_bg"
+        android:gravity="center"
+        android:text="&#xe545;"
+        android:textColor="#ffffff"
+        android:textSize="22dp"
+        android:visibility="visible" />
+</RelativeLayout>

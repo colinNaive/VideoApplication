@@ -1,0 +1,56 @@
+{
+	"groupEightGridList": [
+		{
+			"key": "bus",
+			"title": "周边",
+			"imageUrl": "cttour_package_mainicon_bus"
+		},
+		{
+			"key": "cn",
+			"imageUrl": "cttour_package_mainicon_cn2",
+			"title": "境内"
+		},
+		{
+			"key": "hk",
+			"imageUrl": "cttour_package_mainicon_hk",
+			"title": "港澳台"
+		},
+		{
+			"key": "jp",
+			"imageUrl": "cttour_package_mainicon_jp",
+			"title": "日韩朝蒙"
+		},
+		{
+			"key": "thai",
+			"imageUrl": "cttour_package_mainicon_thai",
+			"title": "东南亚"
+		},
+		{
+			"key": "europe",
+			"imageUrl": "cttour_package_mainicon_europe",
+			"title": "欧洲"
+		},
+		{
+			"key": "us",
+			"imageUrl": "cttour_package_mainicon_us",
+			"title": "美洲"
+		},
+		{
+			"key": "azdf",
+			"imageUrl": "cttour_package_mainicon_azdf",
+			"title": "澳中东非"
+		}
+	],
+	"aroundReplacement": {
+		"key": "hot",
+		"imageUrl": "tour_group_eight_grid_hot",
+		"title": "热门"
+	},
+	"groupBanner": {
+		"appLink": "/deals/index.html#deals_list?tabtype=1",
+		"text": "跟团游特卖",
+		"appImageUrl": "http://images3.c-ctrip.com/vacationUED_pic/pic_onsale0410.png"
+	},
+	"groupDomestic": "境内跟团游",
+	"groupOversea": "出境跟团游"
+}
